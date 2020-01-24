@@ -1,0 +1,70 @@
+// Place all the styles related to the members controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+//html{
+
+//  position:relative;
+//  min-height:100vh;
+//}
+
+/*↓footer↓*/
+
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  //position: absolute;
+  //bottom: 0;
+
+
+}
+footer p{
+
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+ul.footer-menu li {
+  display: inline;
+
+
+}
+/*↑footer↑*/
+
+
+.name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+//* {
+//	margin: 0;
+//	padding: 0;
+//}
+
+//#grid {
+//	width: 450px;
+//}
+.mem {
+	margin: 5px;
+  width: 33.33%;
+	float: left;
+  list-style: none;
+  margin-bottom: 30px;
+}

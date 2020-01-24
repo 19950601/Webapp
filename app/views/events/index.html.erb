@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<div class="top-image">
+  <a href="http://localhost:3000/"><img class="top-image_item" alt="TOP image" src="/assets/logo.png" ></a>
+</div>
+
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Title</th>
+      <th>Place</th>
+      <th>Detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.day %></td>
+        <td><%= event.title %></td>
+        <td><%= event.place %></td>
+        <td><%= event.detail %></td>
+        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_event_path %>

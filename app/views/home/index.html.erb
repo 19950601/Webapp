@@ -1,0 +1,111 @@
+<html>
+<body>
+<!-- header -->
+
+<div class="top-image">
+  <img class="top-image_item" alt="TOP image" src="/assets/logo.png" >
+</div>
+
+
+
+
+
+<ul class="nav-list">
+  <li class="nav-list-item"><a href="http://localhost:3000/events/">EVENT</a></li>
+  <li class="nav-list-item"><a href="http://localhost:3000/news/">NEWS</a></li>
+  <li class="nav-list-item"><a href="http://localhost:3000/members/">MEMBER</a></li>
+  <li class="nav-list-item"><a href="http://localhost:3000/discos/">DISCO</a></li>
+  <li class="nav-list-item"><a href="http://localhost:3000/items/">GOODS</a></li>
+</ul>
+
+<div style="text-align:right;">
+
+  <ul class="header-social">
+    <li class="header-social_item">
+      <a href="https://twitter.com/MAGiPUNofficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+        <i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+      <a href="https://www.youtube.com/channel/UC2W4F0roFIu5jN9ACjB6VWA">
+        <i class="fab fa-youtube" aria-hidden="true"></i></a>
+      <a href="https://itunes.apple.com/co/artist/%E3%83%9E%E3%82%B8%E3%82%AB%E3%83%AB-%E3%83%91%E3%83%B3%E3%83%81%E3%83%A9%E3%82%A4%E3%83%B3/1128717729">
+        <i class="fab fa-itunes" aria-hidden="true"></i></a>
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div class="top-image">
+  <img class="top-image_item" alt="TOP image" src="/assets/image1.jpg" >
+</div>
+
+<p>
+<div class="text">
+「魔法」をコンセプトとしたアイドルグループ、マジカル・パンチライン＝通称マジパンの非公式サイト。少女たちの冒険がいま、はじまる。
+</div>
+
+
+
+
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/hT0UDeFp27k"
+frameborder="0" allow="accelerometer; autoplay;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+
+
+
+
+
+
+
+<section>
+
+
+  <div class="main-frame">
+    <div class="left-frame">
+
+      <h2>NEWS</h2>
+      <div class="left-box">
+        <ul>
+        <% @news.each do |n| %>
+        <li><a href="http://localhost:3000/news/<%=n.id%>"><%= n.title %><%=n.day%></a></li>
+        <% end %>
+        </ul>
+        <a class="more-button" href="http://localhost:3000/news/">more <i class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <h2>EVENT</h2>
+      <div class="left-box">
+        <ul>
+          <% @events.each do |event| %>
+          <li><a href="http://localhost:3000/events/<%=event.id%>"><%= event.day %><%=event.title%><%=event.place%></a></li>
+          <% end %>
+
+        </ul>
+        <a class="more-button" href="http://localhost:3000/events/">more <i class="fas fa-chevron-right"></i></a>
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+<!-- サイトの中身部分 -->
+<div id="page_top"><a></a></div>
+<!-- footer -->
+<footer>
+  　　<ul class="footer-menu">
+  <li>EVENT ｜</li>
+  <li>NEWS ｜</li>
+  <li>MEMBER ｜</li>
+  <li>DISCO ｜</li>
+  <li>GOODS</li>
+</ul>
+  <p>© All rights reserved by intern.</p>
+</footer>
+</body>
+</html>
